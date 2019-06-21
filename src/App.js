@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import PersonList from './PersonList';
 
 function App() {
   return (
@@ -16,8 +17,10 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
+           <PersonList></PersonList>
           Learn React
         </a>
+       
       </header>
     </div>
   );
