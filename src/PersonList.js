@@ -4,21 +4,28 @@ import axios from 'axios';
 
 export default class PersonList extends React.Component {
   state = {
-    persons: {}
+    persons: {},
+    peoples: {}
   }
 
  getUser = async () => {
   
      await 
-   axios.post(`http://localhost:8080/api/v1/setjsonfil`, { firstname: 'Mlj7jhon', lastname: 'Bernardes' }).then(res => {
+   axios.post(`http://localhost:8080/api/v1/setjsonfil`, { firstname: 'Mjon', lastname: 'Bern만두ddrdes' }).then(res => {
    // axios.get(`http://localhost:8080/api/v1/getjsonfil/12c34`).then(res => {
-      const persons = res.data;
+     
+       const persons = res.data;
         this.setState({ persons });
-       // axios.put(`http://localhost:8080/api/v1/setjsonfil`, { firstName: 'Marlon', lastName: 'Bernardes' })
+       
       });
     
-    
- 
+   
+    axios.get(`http://localhost:8080/api/v1/getjsonfil/12c34`).then(res => {
+     
+      const peoples = res.data;
+        this.setState({ peoples });
+       
+      });
 }
 
   componentDidMount() {
